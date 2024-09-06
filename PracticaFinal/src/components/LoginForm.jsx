@@ -1,6 +1,9 @@
 import { useRef, useState } from "react";
 import { useNavigate, useRef, useEffect } from "react-router-dom";
+import Swal from 'sweetalert2/dist/sweetalert2.js';
+import 'sweetalert2/src/sweetalert2.scss';
 import { get } from "../services/fetch";
+import Swal from 'sweetalert2';
 
 function LoginForm() {
 
@@ -17,16 +20,29 @@ function LoginForm() {
     const claveRef = useRef();
 
     const vacios = () => {
-        const correoTrim = correoRef.current.value.trim();
+        const codigoTrim = codigoRef.current.value.trim();
+        const nombreTrim = nombreRef.current.value.trim();
+        const emailTrim = correoRef.current.value.trim();
         const claveTrim = claveRef.current.value.trim();
     
-        if (!correoTrim || !claveTrim) {
-          alert("Por favor complete todos los campos.");
+        if (!codigoTrim || !nombreTrim || !emailTrim || !claveTrim) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Campos vacíos',
+                text: 'Por favor, completa todos los campos.',
+              });
           return;
         }
-        // Llama a la función para autenticar al usuario
-        const valida=useData.find(user=>user.correo === correo && user.clave === clave)
-        authenticate(valida)
+
+        Swal.fire({
+            icon: 'success',
+            title: 'Formulario enviado',
+            text: 'Gracias por completar el formulario.',
+          });
+
+        // Llama a la función para autentificar al usuario
+        const validar=useData.find(user=>user.codigo === codigo && user.nombbre === nombbre && user.email === email && user.clave === clave)
+        authenticate(validar)
       };
 
     const authenticate = async (validar) => {
@@ -59,7 +75,7 @@ function LoginForm() {
             <input type="text" id="nombre" placeholder="Ingrese su nombre" value={nombre} onChange={(e) => setNombre(e.target.value)}/>
             <input type="email" id="email" placeholder="Ingrese su email" value={email} onChange={(e) => setEmail(e.target.value)}/>
             <input type="password" id="clave" placeholder="Ingrese su clave" value={clave} onChange={(e) => setClave(e.target.value)}/>
-            <button>Iniciar Sesion</button>
+            <button onClick={vacios}>Iniciar Sesion</button>
     </div>
   )
 }
