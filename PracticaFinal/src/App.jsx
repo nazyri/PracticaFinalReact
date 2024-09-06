@@ -1,13 +1,14 @@
-
+// import Login from './pages/Login'
 import './App.css'
-
+import Register from './pages/Register'
 function App() {
 
 
   return (
     <>
-      <div>
-
+      <div className='container-app'>
+        {/* <Login/> */}
+        <Register/>
       </div>
     </>
   )

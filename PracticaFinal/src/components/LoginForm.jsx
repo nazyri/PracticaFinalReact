@@ -1,13 +1,11 @@
 import { useRef, useState } from "react";
-import { useNavigate, useRef, useEffect } from "react-router-dom";
-import Swal from 'sweetalert2/dist/sweetalert2.js';
-import 'sweetalert2/src/sweetalert2.scss';
+import {useNavigate, useEffect} from "react";
 import { get } from "../services/fetch";
 import Swal from 'sweetalert2';
 
 function LoginForm() {
 
-    const nav = useNavigate();
+    const nav = useNavigate
     const [useData, setUseData]= useState([])
     const [codigo, setCodigo]= useState("");
     const [nombre, setNombre]= useState("");
@@ -22,7 +20,7 @@ function LoginForm() {
     const vacios = () => {
         const codigoTrim = codigoRef.current.value.trim();
         const nombreTrim = nombreRef.current.value.trim();
-        const emailTrim = correoRef.current.value.trim();
+        const emailTrim = emailRef.current.value.trim();
         const claveTrim = claveRef.current.value.trim();
     
         if (!codigoTrim || !nombreTrim || !emailTrim || !claveTrim) {
@@ -41,7 +39,7 @@ function LoginForm() {
           });
 
         // Llama a la función para autentificar al usuario
-        const validar=useData.find(user=>user.codigo === codigo && user.nombbre === nombbre && user.email === email && user.clave === clave)
+        const validar=useData.find(user=>user.codigo === codigo && user.nombre === nombre && user.email === email && user.clave === clave)
         authenticate(validar)
       };
 
@@ -66,7 +64,7 @@ function LoginForm() {
            }
            console.log(useData);
            usarGet()
-           },[])
+           },[useData])
     
   return (
     <div>

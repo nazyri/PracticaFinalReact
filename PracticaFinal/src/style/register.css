@@ -1,0 +1,55 @@
+body{
+    overflow: hidden;
+    margin: 0%;
+    padding: 0%;
+}
+.register {
+    display: flex;
+    align-items: stretch; /* Ensure both items stretch to the container's height */
+    justify-content: space-between;
+    margin-top: 130px;
+    margin-top: 0%;
+    padding: 0%;
+    height: 100vh; /* Full viewport height */
+}
+
+.img-register {
+    flex: 1; /* Take up all available space on the left */
+    width: 55%; /* Ensure the image covers the entire left side */
+    height: 100%; /* Ensure the image covers the entire left side */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+}
+.form{
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0px 0px 10px rgb(149, 147, 147);
+}
+.container-register {
+    
+    width: 50%; /* Adjust width as needed */
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+}
+@media (max-width: 768px) {
+    .register {
+        flex-direction: column;
+        margin-top: 0%;
+        display: flex;
+        align-items: stretch;
+        
+    }
+
+    .img-register {
+        height: 50vh;
+        width: 100%;
+    }
+
+    .container-register {
+        width: 100%;
+        margin-top: 20px;
+    }
+}
