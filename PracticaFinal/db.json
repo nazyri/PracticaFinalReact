@@ -1,0 +1,44 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "nombre": "Moha",
+      "email": "Moha@gmail.com",
+      "clave": "1234",
+      "tareas": {}
+    },
+    {
+      "id": "674e",
+      "nombre": "Ana",
+      "correo": "ana@gmail.com",
+      "clave": "123"
+    },
+    {
+      "id": "bb71",
+      "nombre": "Ana",
+      "correo": "ana@gmail.com",
+      "clave": "123"
+    },
+    {
+      "id": "7737",
+      "nombre": "ana",
+      "codigo": "1234",
+      "correo": "ana@gmail.com",
+      "clave": "123"
+    },
+    {
+      "id": "5986",
+      "nombre": "ana",
+      "codigo": "1234",
+      "correo": "ana@gmail.com",
+      "clave": "123"
+    },
+    {
+      "id": "3fd7",
+      "nombre": "Luis",
+      "codigo": "123",
+      "correo": "luis@gmail.com",
+      "clave": "123"
+    }
+  ]
+}

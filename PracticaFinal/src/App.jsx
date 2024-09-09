@@ -1,14 +1,14 @@
-// import Login from './pages/Login'
 import './App.css'
-import Register from './pages/Register'
+// import Register from './pages/Register'
+import Login from './pages/Login'
 function App() {
 
 
   return (
     <>
       <div className='container-app'>
-        {/* <Login/> */}
-        <Register/>
+        {/* <Register/> */}
+        <Login/>
       </div>
     </>
   )

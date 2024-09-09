@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "sweetalert2": "^11.13.2"
+    "react-sweetalert2": "^0.6.0",
+    "sweetalert2": "^11.14.0"
   }
 }

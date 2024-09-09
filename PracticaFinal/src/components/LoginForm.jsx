@@ -62,7 +62,7 @@ function LoginForm() {
             const data = await get("users")
                setUseData(data)
            }
-           console.log(useData);
+
            usarGet()
            },[useData])
     
